@@ -1,4 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function PlatformResilienceWebsite() {
+  const [submitted, setSubmitted] = useState(false);
   const pillars = [
     "Architecture Resilience",
     "Backup & Data Protection",
@@ -25,6 +30,13 @@ export default function PlatformResilienceWebsite() {
       desc: "Ongoing senior advisory support for CTOs and technology leaders who need structured guidance without a full-time infrastructure leader.",
     },
   ];
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      setSubmitted(params.get("submitted") === "true");
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F4F6F8] text-[#1F2933]">
@@ -244,6 +256,12 @@ export default function PlatformResilienceWebsite() {
                     contact@platformresilience.io
                   </a>
                 </div>
+
+                {submitted && (
+                  <div className="mt-6 rounded-2xl border border-white/20 bg-white/10 px-4 py-4 text-slate-100">
+                    Thanks — we’ll be in touch shortly.
+                  </div>
+                )}
               </div>
 
               <div className="rounded-[2rem] bg-white p-8 shadow-2xl">
@@ -255,7 +273,7 @@ export default function PlatformResilienceWebsite() {
                   <input type="hidden" name="_subject" value="New Platform Resilience enquiry" />
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_next" value="https://platformresilience.io/thanks" />
+                  <input type="hidden" name="_next" value="https://platformresilience.io/?submitted=true" />
 
                   <div>
                     <label className="mb-2 block text-sm font-medium text-[#0F2A44]">Name</label>
