@@ -247,23 +247,56 @@ export default function PlatformResilienceWebsite() {
               </div>
 
               <div className="rounded-[2rem] bg-white p-8 shadow-2xl">
-                <div className="space-y-5">
+                <form
+                  action="https://formsubmit.co/contact@platformresilience.io"
+                  method="POST"
+                  className="space-y-5"
+                >
+                  <input type="hidden" name="_subject" value="New Platform Resilience enquiry" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_next" value="https://platformresilience.io/thanks" />
+
                   <div>
                     <label className="mb-2 block text-sm font-medium text-[#0F2A44]">Name</label>
-                    <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]" placeholder="Your name" />
+                    <input
+                      name="name"
+                      required
+                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]"
+                      placeholder="Your name"
+                    />
                   </div>
                   <div>
                     <label className="mb-2 block text-sm font-medium text-[#0F2A44]">Work email</label>
-                    <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]" placeholder="you@company.com" />
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]"
+                      placeholder="you@company.com"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm font-medium text-[#0F2A44]">Company</label>
+                    <input
+                      name="company"
+                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]"
+                      placeholder="Company name"
+                    />
                   </div>
                   <div>
                     <label className="mb-2 block text-sm font-medium text-[#0F2A44]">How can we help?</label>
-                    <textarea className="min-h-[120px] w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]" placeholder="Tell us about your platform, resilience concerns, or the service you’re interested in." />
+                    <textarea
+                      name="message"
+                      required
+                      className="min-h-[120px] w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-[#2FA4A9]"
+                      placeholder="Tell us about your platform, resilience concerns, or the service you’re interested in."
+                    />
                   </div>
                   <button className="w-full rounded-2xl bg-[#2FA4A9] px-6 py-3 font-medium text-white hover:opacity-90">
                     Request a resilience review
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </div>
