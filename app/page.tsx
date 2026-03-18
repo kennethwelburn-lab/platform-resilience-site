@@ -54,11 +54,11 @@ export default function PlatformResilienceWebsite() {
             <a href="#services" className="transition-colors hover:text-[#2FA4A9]">Services</a>
             <a href="#iri" className="transition-colors hover:text-[#2FA4A9]">IRI</a>
             <a href="#about" className="transition-colors hover:text-[#2FA4A9]">About</a>
-            <a href="#contact" className="transition-colors hover:text-[#2FA4A9]">Contact</a>
+            <a href="https://calendar.app.google/r9y3D8dbRiGm7QTi6" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#2FA4A9]">Contact</a>
           </nav>
 
           <a
-            href="#contact"
+            href="https://calendar.app.google/r9y3D8dbRiGm7QTi6" target="_blank" rel="noopener noreferrer"
             className="rounded-2xl bg-[#0F2A44] px-4 py-2 text-sm font-medium text-white shadow-sm hover:opacity-90"
           >
             Book a Resilience Review
@@ -84,7 +84,7 @@ export default function PlatformResilienceWebsite() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="#contact"
+                  href="https://calendar.app.google/r9y3D8dbRiGm7QTi6" target="_blank" rel="noopener noreferrer"
                   className="rounded-2xl bg-[#0F2A44] px-6 py-3 font-medium text-white shadow-lg shadow-slate-200 hover:opacity-90"
                 >
                   Book a Resilience Review
@@ -202,7 +202,7 @@ export default function PlatformResilienceWebsite() {
                 <h3 className="mt-5 text-xl font-semibold text-[#0F2A44]">{service.title}</h3>
                 <p className="mt-4 leading-7 text-slate-600">{service.desc}</p>
                 <a
-                  href="#contact"
+                  href="https://calendar.app.google/r9y3D8dbRiGm7QTi6" target="_blank" rel="noopener noreferrer"
                   className="mt-6 inline-flex rounded-2xl border border-slate-300 px-4 py-2 text-sm font-medium text-[#0F2A44] hover:border-[#2FA4A9]"
                 >
                   Discuss this service
