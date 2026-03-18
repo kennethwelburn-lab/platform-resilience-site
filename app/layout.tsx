@@ -18,7 +18,7 @@ export const metadata = {
     template: "%s | Platform Resilience",
   },
   description:
-    "Infrastructure resilience advisory for business-critical platforms. Identify risk, improve resilience, and prevent outages.",
+    "Infrastructure Resilience advisory for business-critical platforms. Identify risk, improve resilience, and prevent outages.",
 };
 
 export default function RootLayout({
